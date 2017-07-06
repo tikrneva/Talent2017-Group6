@@ -16,3 +16,14 @@ In this exercise we prove important commutation rules. The idea of the first par
 # Exercise 1a - second question 
 ?
 
+
+# Exercise 1b - simple Hamiltonian and its eigenvalues
+
+![alt text](https://github.com/tikrneva/Talent2017-Group6/blob/master/Part1-Pen-Paper/1b_1.jpg)
+
+![alt text](https://github.com/tikrneva/Talent2017-Group6/blob/master/Part1-Pen-Paper/1b_2.jpg)
+
+![alt text](https://github.com/tikrneva/Talent2017-Group6/blob/master/Part1-Pen-Paper/1b_3.jpg)
+
+![alt text](https://github.com/tikrneva/Talent2017-Group6/blob/master/Part1-Pen-Paper/1b_4.jpg)
+
