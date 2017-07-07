@@ -27,3 +27,10 @@ In this exercise we prove important commutation rules. The idea of the first par
 
 ![alt text](https://github.com/tikrneva/Talent2017-Group6/blob/master/Part1-Pen-Paper/1b_4.jpg)
 
+# Exercise 1c - Hamiltonian of 4 particles and 4 states
+
+![alt text](https://github.com/tikrneva/Talent2017-Group6/blob/master/Part1-Pen-Paper/1c_1.jpg)
+
+![alt text](https://github.com/tikrneva/Talent2017-Group6/blob/master/Part1-Pen-Paper/1c_2.jpg)
+
+![alt text](https://github.com/tikrneva/Talent2017-Group6/blob/master/Part1-Pen-Paper/1c_3.jpg)
