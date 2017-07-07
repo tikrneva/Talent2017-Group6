@@ -1,0 +1,48 @@
+Last login: Fri Jul  7 12:20:32 on ttys002
+Shanes-MacBook-Pro-2:Week_1 shanewilkins$ python3 2p_unbound.py 
+
+These isotopes are unbound to two proton decay:
+N 	 A 	 S2p 		 S1p
+4 	 6 	 -1372.178 	 592.822
+5 	 7 	 -1419.724 	 -2012.546
+6 	 8 	 -2111.291 	 -98.745
+7 	 10 	 -1300.515 	 -2600.082
+8 	 12 	 -1637.996 	 -322.078
+9 	 14 	 -48.391 	 -1560.008
+10 	 15 	 -2522.0 	 -961.992
+10 	 16 	 -1401.063 	 -131.055
+11 	 17 	 -4028.524 	 -3897.469
+12 	 19 	 -750.007 	 498.571
+18 	 30 	 -2280.0 	 -480.0
+80 	 172 	 -662.5 	 785.5
+81 	 176 	 -657.5 	 -1265.25
+82 	 178 	 -781.25 	 374.25
+
+These isotopes are unbound to proton decay but stable to one proton decay
+N 	 A 	 S2p 		 S1p
+4 	 6 	 -1372.178 	 592.822
+12 	 19 	 -750.007 	 498.571
+80 	 172 	 -662.5 	 785.5
+82 	 178 	 -781.25 	 374.25
+Shanes-MacBook-Pro-2:Week_1 shanewilkins$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
