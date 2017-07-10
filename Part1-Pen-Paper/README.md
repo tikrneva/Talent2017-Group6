@@ -56,3 +56,7 @@ Off-diagonal elements are calculated next:
 ![alt text](https://github.com/tikrneva/Talent2017-Group6/blob/master/Part1-Pen-Paper/1c_4.jpg)
 ![alt text](https://github.com/tikrneva/Talent2017-Group6/blob/master/Part1-Pen-Paper/1c_5.jpg)
 ![alt text](https://github.com/tikrneva/Talent2017-Group6/blob/master/Part1-Pen-Paper/1c_6.jpg)
+
+
+Eigenvalues as a function of g:
+![alt text](https://github.com/tikrneva/Talent2017-Group6/blob/master/Part1-Pen-Paper/eigenvals.png)
