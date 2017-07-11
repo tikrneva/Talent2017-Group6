@@ -1,6 +1,12 @@
-#============================
+#==========================================================
 # Additional functions 
-#=============================
+#
+# HOW TO USE: in beginning of the main program, add line:
+#
+#        from add_funcs import permutator
+#
+# and you can call these functions inside main.py!
+#==========================================================
 
 import numpy as np
 
