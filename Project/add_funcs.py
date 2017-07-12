@@ -52,3 +52,24 @@ def permutator(array):
     # if len(alist) == 0 then:
     else:
        return 0,array #array is empty
+
+
+
+#======================================================================
+# LEVEL PLOTTER: plots the given eigenenergies
+#======================================================================
+def showlevels(energies):
+    for e in energies:
+        plt.plot((1.0,1.5),(e,e),'k-') #draws a line at energy e
+    plt.plot((0.5,2.0),(0,0),'r--')
+    plt.ylabel('Energy')
+    plt.title('Energy levels')
+    plt.xlim([0,2.5])
+    plt.tick_params(       # Remove x-tics:
+        axis='x',          # changes apply to the x-axis
+        which='both',      # both major and minor ticks are affected
+        bottom='off',      # ticks along the bottom edge are off
+        top='off',         # ticks along the top edge are off
+        labelbottom='off') # labels along the bottom edge are off
+    plt.show()
+    return 
