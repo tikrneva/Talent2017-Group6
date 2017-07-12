@@ -111,3 +111,7 @@ print('')
 print("Energy eigenvalues:")
 w,v = LA.eig(H)
 print w
+
+# Plot energies (if you are testing program, comment this so 
+# you don't get a figure every single time when running a program)
+showlevels(np.array(w)) #"showlevels" is in add_funcs.py
