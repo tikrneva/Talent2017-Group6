@@ -66,3 +66,37 @@ def showlevels(energies):
         labelbottom='off') # labels along the bottom edge are off
     plt.show()
     return 
+
+
+#==============================================================================================
+# Routine that picks only those slater
+# determinants of the pairing problem
+#
+# E.g. with input:
+#
+# myslaters=[[1,2,3,4],[1,2,4,5],[3,4,5,8],[1,2,7,8],[3,5,6,7], [3,4,5,6], [3,4,7,8], [1,6,7,8]]
+#
+# you will get
+#
+# [[1, 2, 3, 4], [1, 2, 7, 8], [3, 4, 5, 6], [3, 4, 7, 8]]
+#==============================================================================================
+def pickpairs(allslaters):
+   notsuitable = np.zeros(len(allslaters)) #this is just an array for marking 0=fine, 1=not suitable sd
+   for sd in allslaters:
+      sdind=allslaters.index(sd) #index for the slater determinant which is studied now
+      if len(sd)%2 != 0:         # check that there are even number of particles now
+         print "Number of particles is not even!" 
+         return []
+      halflen=len(sd)/2         # I want to loop over 2*i so I have to take a half of the upper limit
+      for i in range(0,halflen):
+          if sd[2*i]%2 == 0:    # First, third... particle must be on an odd state 
+             notsuitable[sdind]=1
+          elif sd[2*i+1]%2 !=0: # Second, fourth... particle must be on an even state
+             notsuitable[sdind]=1
+          elif sd[2*i] != sd[2*i+1]-1: # Because we have pairs and sd's are ordered, 1st and 2nd particle must be 1,2 or 3,4 etc
+             notsuitable[sdind]=1
+   suitableslaters = []
+   for ind in range(0,len(notsuitable)):
+       if (notsuitable[ind] == 0):
+          suitableslaters.append(allslaters[ind]) # finally we combine suitable slater determinants
+   return suitableslaters
