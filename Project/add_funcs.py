@@ -111,14 +111,15 @@ def pickpairs(allslaters):
 # n=np.array([0,0,1,1,2,2,3,3])
 # l=np.array([0,0,0,0,0,0,0,0])
 # j=np.array([1,1,1,1,1,1,1,1])
-# m=np.array([-1,1,-1,1,-1,1,-1,1])
 # myslaters=[[1,2,3,4],[1,2,4,5],[3,4,5,8],[1,2,7,8],[3,5,6,7], [3,4,5,6], [3,4,7,8], [1,6,7,8]]
 #
 # you will get
 #
 # [[1, 2, 3, 4], [1, 2, 7, 8], [3, 4, 5, 6], [3, 4, 7, 8]]
+#
+# TODO Think about m values: do we need constraint ???
 #==============================================================================================
-def pickpairsnljm(allslaters,n,l,j,m):
+def pickpairsnljm(allslaters,n,l,j):
    notsuitable = np.zeros(len(allslaters)) #this is just an array for marking 0=fine, 1=not suitable sd
    for sd in allslaters:
       sdind=allslaters.index(sd) #index for the slater determinant which is studied now
@@ -127,8 +128,7 @@ def pickpairsnljm(allslaters,n,l,j,m):
          return []
       halflen=len(sd)/2         # I want to loop over 2*i so I have to take a half of the upper limit
       for i in range(0,halflen):
-         if n[sd[2*i]-1] != n[sd[2*i+1]-1] or l[sd[2*i]-1] != l[sd[2*i+1]-1] or j[sd[2*i]-1] != j[sd[2*i+1]-1] \
-         or m[sd[2*i]-1] != -1*m[sd[2*i+1]-1]:
+         if n[sd[2*i]-1] != n[sd[2*i+1]-1] or l[sd[2*i]-1] != l[sd[2*i+1]-1] or j[sd[2*i]-1] != j[sd[2*i+1]-1]:
             notsuitable[sdind]=1
    suitableslaters = []
    for ind in range(0,len(notsuitable)):
