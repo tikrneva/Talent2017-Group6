@@ -2,6 +2,8 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+import uncertainties
+from uncertainties import unumpy
 print('')
 
 # Load data from file
@@ -27,6 +29,7 @@ Z = np.array(Z)
 A = np.array(A)
 BE = np.array(BE)
 BE_error = np.array(BE_error)
+BE = unumpy.uarray(BE,BE_error)
 N = np.array(N)
 
 # Create array of each Z and N in arrays
@@ -88,3 +91,49 @@ print('These isotopes are unbound to proton decay but stable to one proton decay
 print('N 	 Z 	 S2p 		 S1p')
 for i in range(len(N_1p_b_2p_u)):
 	print(Z_1p_b_2p_u[i],'	',N_1p_b_2p_u[i]+Z_1p_b_2p_u[i],'	',S_2p_u[i],'	',S_1p_b_2p_u[i])
+
+
+# # Create empty lists for reordering
+# N_1 = []
+# Z_1 = []
+# BE_1 = []
+
+# # Reorder lists into isotones of given Z number
+# for i in range(len(Z_i)):
+# 	for j in range(len(Z)):
+# 		if Z[j] == Z_i[i]:
+# 			N_1.append(N[j])
+# 			Z_1.append(Z[j])
+# 			BE_1.append(BE[j])
+
+
+# # Create empty lists for S_2n
+# S_2n = []
+# S_1n = []
+# N_S_2n= []
+# Z_S_2n = []
+
+# # Calculate and add S_2p, S_1p (and Z,N) for isotones for which it can be computed
+# for i in np.arange(1,len(Z_1)-1,1):
+# 	if Z_1[i] == Z_1[i-2]:
+# 		S_2n.append(BE_1[i]-BE_1[i-2])
+# 		S_1n.append(BE_1[i]-BE_1[i-1])
+# 		N_S_2n.append(N_1[i])
+# 		Z_S_2n.append(Z_1[i])
+
+# S_2n = np.array(S_2n)
+# N_S_2n = np.array(N_S_2n)
+# Z_S_2n = np.array(Z_S_2n)
+
+# S_2n = S_2n[Z_S_2n==8]
+# N_S_2n = N_S_2n[Z_S_2n==8]
+# S_2n /= 1000
+
+# plt.errorbar(N_S_2n,unumpy.nominal_values(S_2n),yerr=unumpy.std_devs(S_2n),fmt='bo')
+# plt.xlabel('Neutron number')
+# plt.ylabel('$S_{2n}$ (M8V)')
+# plt.xlim(5,19)
+# plt.ylim(-1,50)
+# plt.savefig('S_2n_even_N.pdf',bbox_inches='tight')
+# plt.show()
+
