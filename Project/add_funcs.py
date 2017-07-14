@@ -135,3 +135,29 @@ def pickpairsnljm(allslaters,n,l,j,m):
        if (notsuitable[ind] == 0):
           suitableslaters.append(allslaters[ind]) # finally we combine suitable slater determinants
    return suitableslaters
+
+
+#==============================================================================================
+# Picks the slaterdeterminants which have given M
+# This code calculates the sum of m values of particles in a slaterdeterminant, and if
+# the sum is equals to given M, slater determinant is accepted
+#
+# For example, with given input
+# myslaters=[[1,2,3,4],[1,3,5,7],[3,5,6,7],[1,3,7,8],[2,4,6,8], [3,4,5,6], [4,5,6,7], [1,6,7,8]]
+# m=np.array([-1,1,-1,1,-1,1,-1,1])
+# M=0
+#
+# you get
+# [[1, 2, 3, 4], [3, 4, 5, 6], [4, 5, 6, 7], [1, 6, 7, 8]]
+#==============================================================================================
+def pickslatersM(allslaters,m,totalM):
+   totalMs=[]
+   suitableslaters=[]
+   for sd in allslaters:
+      sdind=allslaters.index(sd) # index for the sd which is studied
+      sdM=0
+      for i in range(0,len(sd)):
+          sdM=sdM+m[sd[i]-1]
+      if sdM == totalM:
+          suitableslaters.append(allslaters[sdind])
+   return suitableslaters
