@@ -1,12 +1,14 @@
-# Ex 1: Use aud16.dat find all known nuclei that are unbound to two-proton decay but bound to one-proton decay.
+# Exercise set 1 - solutions
 
-# Ex 2: Use the liquid-drop model to obtain the neutron drip line for Z=36-44. Compare to the HFB-27 model and comment on the reasons for the difference.
+### Ex 1: Use aud16.dat find all known nuclei that are unbound to two-proton decay but bound to one-proton decay.
 
-# Ex 3: Use rms13.dat to obtained the differences in charge radii for N and N-1 and make a plot vs neutron number N. Comment on the result. This is known as the Brix-Kopferman plot.
+### Ex 2: Use the liquid-drop model to obtain the neutron drip line for Z=36-44. Compare to the HFB-27 model and comment on the reasons for the difference.
 
-# Ex 4: Use toiee.dat to make a plot of the ratio of the 8+ to 6+ energies for yrast states. Comment on your results.
+### Ex 3: Use rms13.dat to obtained the differences in charge radii for N and N-1 and make a plot vs neutron number N. Comment on the result. This is known as the Brix-Kopferman plot.
 
-# Ex 5: Calculate the 14C decay Q value of 223Ra. Use this to estimate the half-life and compare to experiment. What is the branching ratio for the 14C decay?
+### Ex 4: Use toiee.dat to make a plot of the ratio of the 8+ to 6+ energies for yrast states. Comment on your results.
+
+### Ex 5: Calculate the 14C decay Q value of 223Ra. Use this to estimate the half-life and compare to experiment. What is the branching ratio for the 14C decay?
 
 ### Na23 levels
 ![alt text](https://github.com/tikrneva/Talent2017-Group6/blob/master/Week%201/Exercises/na23y.png)
