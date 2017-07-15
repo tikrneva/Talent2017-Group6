@@ -10,6 +10,8 @@
 
 ### Ex 5: Calculate the 14C decay Q value of 223Ra. Use this to estimate the half-life and compare to experiment. What is the branching ratio for the 14C decay?
 
+# External e-mail exercise
+
 ### Na23 levels
 ![alt text](https://github.com/tikrneva/Talent2017-Group6/blob/master/Week%201/Exercises/na23y.png)
 
