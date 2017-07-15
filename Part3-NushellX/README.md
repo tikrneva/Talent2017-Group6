@@ -1,10 +1,10 @@
-# PART 3: NUSHELLX CALCULATIONS
+## PART 3: NUSHELLX CALCULATIONS
 
 Shane: I added the 2nd bullet point of the Nushellx project exercises. I uploaded the plots comparing the calculations to experimental data.
 
 I also plotted the excitation energy of the first 2 plus state for even-N oxygen isotopes
 
-# Task 1: Test your effective interaction and setup of single-particle energies by computing the spectra of 18O and 18F (USDA and USDB, compare to experiments)
+#Task 1: Test your effective interaction and setup of single-particle energies by computing the spectra of 18O and 18F (USDA and USDB, compare to experiments)
 
 # Task 2: Perform shell-model studies using Nushellx for all oxygen isotopes from 18O to 28O, plot the lowest-lying 3-4 states and compare with data where available
 
