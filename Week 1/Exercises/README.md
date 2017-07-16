@@ -28,9 +28,8 @@ The differences in charge radii for N and N-1 were calculated by using the progr
 
 ![alt text](https://github.com/tikrneva/Talent2017-Group6/blob/master/Week%201/Exercises/rms_radii_N.png)
 
-
-
 ### Ex 4: Use toiee.dat to make a plot of the ratio of the 8+ to 6+ energies for yrast states. Comment on your results.
+
 
 ### Ex 5: Calculate the 14C decay Q value of 223Ra. Use this to estimate the half-life and compare to experiment. What is the branching ratio for the 14C decay?
 
