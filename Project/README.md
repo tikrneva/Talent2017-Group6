@@ -9,6 +9,9 @@ add_funcs.py : This file includes additional functions which are used or have be
    + pickpairs: picks the slater determinants which fulfill the pairing condition (this is only for the very first problem, where we have always only two particles on the same level)
    + pickpairsljm: picks the slater determinants which fulfill the pairing condition (n,l and j must be same)
    + pickslatersM: picks the slater determinants which have a given total M
+   + find_slaters: returns a set of possible Slater determinant for set of states s and m number of particles
+   + two_body: takes two-body operator indices p,q,r,s and index alpha for the ket Slater determinant and returns the index beta of the new Slater determinant and its phase
+   + diag_element: calculates diagonal element in Hamiltonian by summing single-particle energies of the Slater determinant
       
 sp.dat : the file includes single particle states and the related indexing for the 4 level case (only two particles at the same level)
 
@@ -22,3 +25,13 @@ No_broken.py : the main program for the ''no broken pairs'' case. It does the fo
    + It builds the Hamiltonian 
    + It diagonalizes Hamiltonian (calculates eigenenergies)
    + It prints and plots eigenenergies
+
+shell_sd.py : This program calculates the energy levels for the sd shell from usdb interactions. (The code works for the pairing problem, but it might contain errors. I haven't compared the results yet). It does the following:
+   + It loads the single-particles states from file 'spdata_sd.dat'
+   + It loads the matrix elements for the effective interaction from file 'shellint_sd.dat'
+   + It asks how many particles to have in the system and total M
+   + It calculates all possible Slater determinants
+   + It picks those Slater determinants which have the given M
+   + It builds the Hamiltonian
+   + It diagonalized the Hamiltonian
+   + It prints and plots the eigenenergies
