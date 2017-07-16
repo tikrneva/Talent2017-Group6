@@ -8,6 +8,7 @@ TODO: physical explanation?
 
 ### Ex 2: Use the liquid-drop model to obtain the neutron drip line for Z=36-44. Compare to the HFB-27 model and comment on the reasons for the difference.
 The program "n_drip_Shane.py" calculates the neutron dripline for Z=36-44. The result is:
+
 |  N  |  Z  |
 |-----|-----|
 | 36  | 94  |
