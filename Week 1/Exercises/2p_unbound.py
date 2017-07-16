@@ -88,7 +88,7 @@ S_2p_u = S_2p_u[S_1p_2p_u > 0]
 S_1p_b_2p_u = S_1p_2p_u[S_1p_2p_u > 0]
 
 print('These isotopes are unbound to proton decay but stable to one proton decay')
-print('N 	 Z 	 S2p 		 S1p')
+print('Z 	 N 	 S2p 		 S1p')
 for i in range(len(N_1p_b_2p_u)):
 	print(Z_1p_b_2p_u[i],'	',N_1p_b_2p_u[i]+Z_1p_b_2p_u[i],'	',S_2p_u[i],'	',S_1p_b_2p_u[i])
 
