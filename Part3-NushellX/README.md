@@ -13,6 +13,8 @@ All oxygen isotopes from 18O to 28O are calculated and the level plots (in .eps 
 ### Task 3: Perform also shell-model studies using Nushellx for all isotopes from 18F to 29F, plot the lowest-lying 3-4 states and compare with data where available. Comment your results. Try also to compute 30F and 31F
 The isotopes from 18F to 29F have been calculated and the level plots can be found in the directory ![F_isotops](https://github.com/tikrneva/Talent2017-Group6/blob/master/Part3-NushellX/F_isotops). 
 
+TODO: Try 30F and 31F
+
 ### Task 4: See also if you can find excited states in 25O and 25F with negative parity
 
 ### Task 5: Use the monopole interactions to calculate the energies for the ground states of the four nuclei 22−25O assuming a single Slater determinant for each. The USDB two-body matrix elements are assumed to scale like 18/A^0.3.
