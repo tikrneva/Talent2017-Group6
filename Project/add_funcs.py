@@ -161,3 +161,52 @@ def pickslatersM(allslaters,m,totalM):
       if sdM == totalM:
           suitableslaters.append(allslaters[sdind])
    return suitableslaters
+
+
+#==============================================================================================
+# Functions that returns a set of set of possible 
+# Slater determinant for set of states s and m number of particles
+#==============================================================================================
+def find_slaters(s,m):
+	return set(itertools.combinations(s,m))
+
+
+#==============================================================================================
+# Function that takes two-body operator indices p,q,r,s and index alpha for the ket Slater determinant 
+# and returns the index beta of the new Slater determinant and the phase
+#==============================================================================================
+def two_body(p,q,r,s,alpha,sd_pairs2):
+	if (r in sd_pairs2[alpha]) and (s in sd_pairs2[alpha]) and (p != q) and (r !=s) and (p not in sd_pairs2[alpha]) and (q not in sd_pairs2[alpha]):
+		# Replace the r- and s-values in alpha with p and q.
+		slater = list(copy.deepcopy(sd_pairs2[alpha]))
+		sd_pairs2 = list(sd_pairs2)
+		slater2 = list(copy.deepcopy(slater))
+		slater2[slater.index(s)] = q
+		slater2[slater.index(r)] = p
+		slater2 = np.array(slater2)
+		(sign,slater3) = permutator(slater2)
+		slater3 = tuple(slater3)
+		beta = sd_pairs2.index(slater3)
+		return (beta,sign)
+	elif (r in sd_pairs2[alpha]) and (s in sd_pairs2[alpha]) and (p != q) and (r !=s) and (p == r) and (q == s):
+		slater= np.array(sd_pairs2[alpha])
+		(sign,slater3) = permutator(slater)
+		slater3 = tuple(slater3) 
+		beta = sd_pairs2.index(slater3)
+		return (beta,sign)
+	else:
+		# new Slater determinant is zero (set phase to zero and index to N_slater+10)
+		beta = int(len(sd_pairs2)+10)
+		return (beta,0)
+    
+    
+#==============================================================================================
+# Function that calculates a diagonal element in the Hamiltonian by summing the 
+# single-particle energies of the Slater determinant
+#==============================================================================================
+def diag_element(slater,energies,N_part):
+	diag_energy = 0
+	for i in range(N_part):
+		particle = slater[i]
+		diag_energy += energies[particle-1]
+	return diag_energy
