@@ -1,6 +1,7 @@
 # Exercise set 1 - solutions
 
 ### Ex 1: Use aud16.dat find all known nuclei that are unbound to two-proton decay but bound to one-proton decay.
+Use 2p_unbound.py (which uses aud16.dat) to calculate two proton and one proton separation energies of the nuclei in aud16.dat. The result is that four nuclei are unbound to two-proton decay but bound to one-proton decay. 
 
 ### Ex 2: Use the liquid-drop model to obtain the neutron drip line for Z=36-44. Compare to the HFB-27 model and comment on the reasons for the difference.
 
