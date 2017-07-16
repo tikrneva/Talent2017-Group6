@@ -8,10 +8,10 @@ This is just a NushellX run for two different nuclei and two different interacti
 ![alt text](https://github.com/tikrneva/Talent2017-Group6/blob/master/Part3-NushellX/F_isotops/18F_usdb.png)
 
 ### Task 2: Perform shell-model studies using Nushellx for all oxygen isotopes from 18O to 28O, plot the lowest-lying 3-4 states and compare with data where available
-All oxygen isotopes from 18O to 28O are calculated and the level plots (in .eps format) can be found in the directory "oxygen_isotopes". Also the excitation energy of the first 2 plus state for even-N oxygen isotopes is plotted.
+All oxygen isotopes from 18O to 28O are calculated and the level plots (in .eps format) can be found in the directory ![oxygen_isotopes](https://github.com/tikrneva/Talent2017-Group6/blob/master/Part3-NushellX/oxygen_isotopes). Also the excitation energy of the first 2 plus state for even-N oxygen isotopes is plotted.
 
 ### Task 3: Perform also shell-model studies using Nushellx for all isotopes from 18F to 29F, plot the lowest-lying 3-4 states and compare with data where available. Comment your results. Try also to compute 30F and 31F
-The isotopes from 18F to 29F have been calculated and the level plots can be found in the directory ![F_isotops](https://github.com/tikrneva/Talent2017-Group6/blob/master/Part3-NushellX/F_isotops) . 
+The isotopes from 18F to 29F have been calculated and the level plots can be found in the directory ![F_isotops](https://github.com/tikrneva/Talent2017-Group6/blob/master/Part3-NushellX/F_isotops). 
 
 ### Task 4: See also if you can find excited states in 25O and 25F with negative parity
 
