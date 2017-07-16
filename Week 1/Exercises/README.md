@@ -24,9 +24,10 @@ The program "n_drip_Shane.py" calculates the neutron dripline for Z=36-44. The r
 TODO: compare with HFB-27
 
 ### Ex 3: Use rms13.dat to obtained the differences in charge radii for N and N-1 and make a plot vs neutron number N. Comment on the result. This is known as the Brix-Kopferman plot.
-The differences in charge radii for N and N-1 were calculated by using the program rms_radii.py. The results are shown in the following figure (Hg and Y are highlighted)
+The differences in charge radii for N and N-1 were calculated by using the program rms_radii.py. The results are shown in the following figure (Hg and Y are highlighted). There is a shift in rms radii near the magic numbers and reflects the changes in deformation.
 
-![alt text](https://github.com/tikrneva/Talent2017-Group6/blob/master/Week%201/Exercises/rmsdata.pdf)
+![alt text](https://github.com/tikrneva/Talent2017-Group6/blob/master/Week%201/Exercises/rms_radii_N.png)
+
 
 
 ### Ex 4: Use toiee.dat to make a plot of the ratio of the 8+ to 6+ energies for yrast states. Comment on your results.
