@@ -1,14 +1,17 @@
 # PART 3: NUSHELLX CALCULATIONS
 
-Shane: I added the 2nd bullet point of the Nushellx project exercises. I uploaded the plots comparing the calculations to experimental data.
-
-I also plotted the excitation energy of the first 2 plus state for even-N oxygen isotopes
-
 ### Task 1: Test your effective interaction and setup of single-particle energies by computing the spectra of 18O and 18F (USDA and USDB, compare to experiments)
+This is just a NushellX run for two different nuclei and two different interaction. Two spectra are shown in the  following figures (the other two are similar).
+
+![alt text](https://github.com/tikrneva/Talent2017-Group6/blob/master/Part3-NushellX/oxygen_isotopes/18Ospectrum.png)
+
+![alt text](https://github.com/tikrneva/Talent2017-Group6/blob/master/Part3-NushellX/F_isotops/18F_usdb.png)
 
 ### Task 2: Perform shell-model studies using Nushellx for all oxygen isotopes from 18O to 28O, plot the lowest-lying 3-4 states and compare with data where available
+All oxygen isotopes from 18O to 28O are calculated and the level plots (in .eps format) can be found in the directory "oxygen_isotopes". Also the excitation energy of the first 2 plus state for even-N oxygen isotopes is plotted.
 
 ### Task 3: Perform also shell-model studies using Nushellx for all isotopes from 18F to 29F, plot the lowest-lying 3-4 states and compare with data where available. Comment your results. Try also to compute 30F and 31F
+The isotopes from 18F to 29F have been calculated and the level plots can be found in the directory ![F_isotops](https://github.com/tikrneva/Talent2017-Group6/blob/master/Part3-NushellX/F_isotops/18F_usdb.png) . 
 
 ### Task 4: See also if you can find excited states in 25O and 25F with negative parity
 
@@ -20,9 +23,9 @@ I also plotted the excitation energy of the first 2 plus state for even-N oxygen
 
 ### Task 8: Calculate the spectroscopic factors from the ground state of 23Oto all states in 24O in the full 1s0d model space. Use the sum rule to obtain the number of holes in those three orbits in 23O. Compare these to those given in the xxx.occ file.
 
-### Task 9: Calculate the 23O 5/2(+,1) to 22O 0(+,1) spectroscopic factor. Explain why it is so small
+### Task 9: Calculate the 23O 5/2(+,1) to 22O 0(+,1) spectroscopic factor. Explain why it is so small.
 
-### Task 10: Use the interaction wspot to obtain the single-particle decay width for the 23O 5/2 (+,1) state using the experimental neutron separation energy as a constraint. Combine this with the result of the last problem to obtain its neutron decay width. Compare to experiment
+### Task 10: Use the interaction wspot to obtain the single-particle decay width for the 23O 5/2 (+,1) state using the experimental neutron separation energy as a constraint. Combine this with the result of the last problem to obtain its neutron decay width. Compare to experiment.
 
 ### Task 11: Calculate the neutron decay width of the 25O 3/2(+,1) state and compare to experiment.  Use the experimental neutron separation energy as a constraint.
 
