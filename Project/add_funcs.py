@@ -17,10 +17,10 @@ def permutator(array):
     seen = []
     for number in alist:
         if number in seen:
-            print "===================================================="
-            print "             E R R O R !!!!                     "
-            print " Pauli is angry - two particles on the same state!"
-            print "===================================================="
+            #print "===================================================="
+            #print "             E R R O R !!!!                     "
+            #print " Pauli is angry - two particles on the same state!"
+            #print "===================================================="
             return 0,[]  
         else:
             seen.append(number)
@@ -176,7 +176,17 @@ def find_slaters(s,m):
 # and returns the index beta of the new Slater determinant and the phase
 #==============================================================================================
 def two_body(p,q,r,s,alpha,sd_pairs2):
-	if (r in sd_pairs2[alpha]) and (s in sd_pairs2[alpha]) and (p != q) and (r !=s) and (p not in sd_pairs2[alpha]) and (q not in sd_pairs2[alpha]):
+	if (r in sd_pairs2[alpha]) and (s in sd_pairs2[alpha]) and (p != q) and (r !=s) and (p == r) and (q == s):
+		slater= np.array(sd_pairs2[alpha])
+		(sign,slater3) = permutator(slater)
+		slater3 = tuple(slater3)
+		if slater3 in sd_pairs2:
+			beta = sd_pairs2.index(slater3)
+		else:
+			beta = 0
+			sign = 0
+		return (beta,sign)
+	elif (r in sd_pairs2[alpha]) and (s in sd_pairs2[alpha]) and (p != q) and (r !=s):
 		# Replace the r- and s-values in alpha with p and q.
 		slater = list(copy.deepcopy(sd_pairs2[alpha]))
 		sd_pairs2 = list(sd_pairs2)
@@ -186,13 +196,11 @@ def two_body(p,q,r,s,alpha,sd_pairs2):
 		slater2 = np.array(slater2)
 		(sign,slater3) = permutator(slater2)
 		slater3 = tuple(slater3)
-		beta = sd_pairs2.index(slater3)
-		return (beta,sign)
-	elif (r in sd_pairs2[alpha]) and (s in sd_pairs2[alpha]) and (p != q) and (r !=s) and (p == r) and (q == s):
-		slater= np.array(sd_pairs2[alpha])
-		(sign,slater3) = permutator(slater)
-		slater3 = tuple(slater3) 
-		beta = sd_pairs2.index(slater3)
+		if slater3 in sd_pairs2:
+			beta = sd_pairs2.index(slater3)
+		else:
+			beta = 0
+			sign = 0
 		return (beta,sign)
 	else:
 		# new Slater determinant is zero (set phase to zero and index to N_slater+10)
