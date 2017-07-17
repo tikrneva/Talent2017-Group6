@@ -26,12 +26,15 @@ TODO: Try 30F and 31F
 ### Task 8: Calculate the spectroscopic factors from the ground state of 23Oto all states in 24O in the full 1s0d model space. Use the sum rule to obtain the number of holes in those three orbits in 23O. Compare these to those given in the xxx.occ file.
 
 ### Task 9: Calculate the 23O 5/2(+,1) to 22O 0(+,1) spectroscopic factor. Explain why it is so small.
+Shane, Ovidiu working on this one
 
 ### Task 10: Use the interaction wspot to obtain the single-particle decay width for the 23O 5/2 (+,1) state using the experimental neutron separation energy as a constraint. Combine this with the result of the last problem to obtain its neutron decay width. Compare to experiment.
 
 ### Task 11: Calculate the neutron decay width of the 25O 3/2(+,1) state and compare to experiment.  Use the experimental neutron separation energy as a constraint.
+Shane, Ovidiu working on this one
 
 ### Task 12: Calculate the gamma decay of 22O for levels up to 6 MeV and compare to experiment. Calculate the B(E2) for Coulex to the 2(+,1) state in 22O and compare with experiment.
+Shane, Ovidiu working on this one
 
 ### Task 13: Calculate the magnetic moment for the 1/2(+,1) ground state of 23O and compare to the single-particle (Schmidt) value.
 
