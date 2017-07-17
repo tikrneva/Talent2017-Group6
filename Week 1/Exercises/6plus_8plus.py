@@ -30,15 +30,13 @@ parity = np.array(parity)
 number = np.array(number)
 E_ex = np.array(E_ex)
 
-# Find only positive parity states
+# Find only positive parity states 
 Z_pos = Z[parity==1]
 A_pos = A[parity==1]
 J_pos = J[parity==1]
 E_ex_pos = E_ex[parity==1]
 parity_pos = parity[parity==1]
 number_pos = number[parity==1]
-
-print(number_pos)
 
 # Find only yrast states
 Z_yrast = Z_pos[number_pos==1]
@@ -48,69 +46,48 @@ E_ex_yrast = E_ex_pos[number_pos==1]
 parity_yrast = parity_pos[number_pos==1]
 number_yrast = number_pos[number_pos==1]
 
-# Find isotopes where 6+ and 8+ yrast states exist 
-Z_1 = np.arange(Z_yrast.min(),Z_yrast.max(),2)
+# Find J=6
+Z_y6=[]
+A_y6=[]
+J_y6=[]
+E_ex_y6=[]
+for i in range(0,len(J_yrast)):
+    if J_yrast[i]==6:
+       Z_y6.append(Z_yrast[i])
+       A_y6.append(A_yrast[i])
+       J_y6.append(J_yrast[i])
+       E_ex_y6.append(E_ex_yrast[i])
 
-Z_86 = []
-A_86 = []
-E_8 = []
-E_6 = []
+# Find J=8
+Z_y8=[]
+A_y8=[]
+J_y8=[]
+E_ex_y8=[]
+for i in range(0,len(J_yrast)):
+    if J_yrast[i]==8:
+       Z_y8.append(Z_yrast[i])
+       A_y8.append(A_yrast[i])
+       J_y8.append(J_yrast[i])
+       E_ex_y8.append(E_ex_yrast[i])
 
-for i in range(len(Z_1)):
-	temp_J = []
-	temp_Z = []
-	temp_A = []
-	temp_E_ex = []
-	for j in range(len(Z_yrast)):
-		if Z_1[i] == Z_yrast[j]:
-			temp_J.append(J_yrast[j])
-			temp_Z.append(Z_yrast[j])
-			temp_A.append(A_yrast[j])
-			temp_E_ex.append(E_ex_yrast[j])	
-			if 6 in temp_J and 8 in temp_J:
-				# print(Z_1[i])
-				# print(temp_J)
-				for k in range(len(temp_J)):
-					if temp_J[k] == 6:
-						Z_86.append(temp_Z[k])
-						A_86.append(temp_A[k])
-						E_6.append(temp_E_ex[k])
-					if temp_J[k] == 8:
-						E_8.append(temp_E_ex[k])
+#Calculate ratios
+ratios86=[]
+finalZ=[]
+finalA=[]
+finalN=[]
+for i in range(0,len(Z_y6)):
+    for j in range(0, len(Z_y8)):
+       if Z_y8[j] == Z_y6[i] and A_y8[j] == A_y6[i]:
+          ratios86.append(E_ex_y8[j]/E_ex_y6[i])
+          finalZ.append(Z_y6[i])
+          finalA.append(A_y6[i])
+          finalN.append(A_y6[i]-Z_y6[i])
 
-Z_86 = np.array(Z_86)
-E_8 = np.array(E_8)
-E_6 = np.array(E_6)
-
-print(len(Z_86),len(E_8))
-
-plt.plot(Z_86,E_8/E_6,'bo')
+#Plot
+plt.plot(finalN,ratios86, 'ro')
+plt.xlabel('N')
+plt.ylabel('E(8)/E(6)')
+plt.title('Ratio of the 8+ to 6+ energies for yrast states')
+plt.ylim(0.5,2.5)
 plt.show()
-
-
-# # Find first excited 6 plus states
-# Z_6plus = Z_yrast[J_yrast==6]
-# A_6plus = A_yrast[J_yrast==6]
-# J_6plus = J_yrast[J_yrast==6]
-# E_ex_6plus = E_ex_yrast[J_yrast==6]
-# parity_6plus = parity_yrast[J_yrast==6]
-# number_6plus = parity_yrast[J_yrast==6]
-
-# # Find first excited 8 plus states
-# Z_8plus = Z_yrast[J_yrast==8]
-# A_8plus = A_yrast[J_yrast==8]
-# J_8plus = J_yrast[J_yrast==8]
-# E_ex_8plus = E_ex_yrast[J_yrast==8]
-# parity_8plus = parity_yrast[J_yrast==8]
-# number_8plus = parity_yrast[J_yrast==8]
-
-# Calculate ratio of 8 plus to 6 plus excitation energy
-# ratio_8over6 = E_ex_8plus/E_ex_6plus
-
-# plt.plot(Z_8plus,)
-
-
-
-
-
-
+           
