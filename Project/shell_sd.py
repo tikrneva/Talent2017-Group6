@@ -1,8 +1,7 @@
 # Nuclear TALENT 2017
 # Tiia, Shane, Martin, Ovidiu
-# This code reads the single-particle states and matrix elements of 
-# effective interactions for N particles and total angular 
-# momentum M and plots the energy eigenvalues
+# This code reads the single-particle states and effective interactions 
+# for N particles and total angular momentum M and plots the energy eigenvalues
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -90,6 +89,8 @@ sd_m = pickslatersM(sd,m_j,M_val)
 # Total number of Slater determinants with 2*M
 N_slater = len(sd_m)
 
+#print(matrix_elements)
+
 # Include scaling factor
 scaling_factor = (18/(16+N_particles))**0.3
 matrix_elements = scaling_factor * matrix_elements
@@ -98,21 +99,21 @@ matrix_elements = scaling_factor * matrix_elements
 H = np.zeros((N_slater, N_slater))
 for beta in range(0, N_slater):
 	# Add single-particle energies to diagonal elements
-	H[beta,beta] += diag_element(sd_m[beta],sp_energies,N_particles)
+	H[beta,beta] = H[beta,beta] + diag_element(sd_m[beta],sp_energies,N_particles)
 	for a in range(N_me):
 		(alpha,phase) = two_body(index1[a],index2[a],index3[a],index4[a],beta,sd_m)
 		if phase != 0:
 			if alpha == beta:
 				H[alpha,beta] += int(phase) * matrix_elements[a]
 			else:
-				H[alpha,beta] += int(phase) * matrix_elements[a]
-				H[beta,alpha] += int(phase) * matrix_elements[a]
+				H[alpha,beta] = H[alpha,beta] + int(phase) * matrix_elements[a]
+				H[beta,alpha] = H[beta,alpha] + int(phase) * matrix_elements[a]
 
 # Print Hamiltonian matrix
-#print('')
-#print("Hamiltonian matrix:")
-#for i in range(len(H)):
-#	print(H[i])
+print('')
+print("Hamiltonian matrix:")
+for i in range(len(H)):
+	print(H[i])
 
 # Check that the Hamiltonian is symmetric
 print('')
