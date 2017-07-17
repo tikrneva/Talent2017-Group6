@@ -90,6 +90,10 @@ sd_m = pickslatersM(sd,m_j,M_val)
 # Total number of Slater determinants with 2*M
 N_slater = len(sd_m)
 
+# Include scaling factor
+scaling_factor = (18/(16+N_particles))**0.3
+matrix_elements = scaling_factor * matrix_elements
+
 # Build Hamiltonian matrix
 H = np.zeros((N_slater, N_slater))
 for beta in range(0, N_slater):
