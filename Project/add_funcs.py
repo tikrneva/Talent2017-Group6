@@ -4,6 +4,8 @@
 
 import numpy as np
 import matplotlib.pyplot as plt
+import itertools
+import copy
 
 #==================================================================
 # This function permutates array and gives the phase +1 or -1
