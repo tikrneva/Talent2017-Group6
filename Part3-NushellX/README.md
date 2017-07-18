@@ -37,7 +37,7 @@ and answer the questions in the following way.
  - interaction name: sdpfmu
  - number of protons: 9
  - number of nucleons: 30
- - min J, max J, del J : 0.5,6.5,1
+ - min J, max J, del J : 0.0,6.0,1
  - parity: 2                                  [Comment: 1 would be enough]
  - option (lpe, den, help or st) :st
  
@@ -60,7 +60,7 @@ Yes, we were able to find excited states in 25O and 25F with negative parity. Th
  - interaction name: sdpfmu
  - number of protons: 9
  - number of nucleons: 25
- - min J, max J, del J : 0.0,6.0,1
+ - min J, max J, del J : 0.5,6.5,1
  - parity: 2                                
  - option (lpe, den, help or st) :st
 
