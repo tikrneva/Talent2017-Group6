@@ -43,8 +43,26 @@ and answer the questions in the following way.
  
  and then type ". f30.bat"
 
-
 ### Task 4: See also if you can find excited states in 25O and 25F with negative parity
+Yes, we were able to find excited states in 25O and 25F with negative parity. The results are shown in the figures "o_25m.png" and "f_25m.png". This is how you run the code for f25:
+
+ - name for batch file: f25
+ - option: lpe
+ - model space: sdpf
+ - any restrictions: y
+ - (s)ub-shell restrictions: m                  [Comment: m=you want to use major shells differently]
+ - number of proton major shells, max 2J: 2     [Comment: you have sd and pf =2 major shells]
+ - number of orbits, min, max in group 1: 3, 1, 1   [Comment: you have 3 orbits is sd shell (s1/2, d5/2 and d3/2), 1proton]
+ - number of orbits, min, max in group 2: 4,0,0   [You assume that one proton stays in sd shell so now 0 protons, in pf shell you have 4 orbits]
+ - number of proton major shells, max 2J: 2
+ - number of orbits, min, max in group 1: 3, 7, 8 [one hole in sd-shell is possible]
+ - number of orbits, min, max in group 2: 4,0,1 [one neutron in pf shell is possible]
+ - interaction name: sdpfmu
+ - number of protons: 9
+ - number of nucleons: 25
+ - min J, max J, del J : 0.0,6.0,1
+ - parity: 2                                
+ - option (lpe, den, help or st) :st
 
 ### Task 5: Use the monopole interactions to calculate the energies for the ground states of the four nuclei 22−25O assuming a single Slater determinant for each. The USDB two-body matrix elements are assumed to scale like 18/A^0.3.
 
