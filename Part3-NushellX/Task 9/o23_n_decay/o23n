@@ -1,9 +1,0 @@
-#!/bin/bash --login
-#PBS -m abe
-#PBS -N o23n     
-. ~/                    
-export PATH="/usr/local/bin:$PATH"
-cd $PBS_O_WORKDIR
-export OMP_NUM_THREADS=32
-. o23n.bat     
-qstat -f $PBS_JOBID
