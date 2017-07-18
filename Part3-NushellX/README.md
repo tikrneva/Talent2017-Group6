@@ -13,7 +13,36 @@ All oxygen isotopes from 18O to 28O are calculated and the level plots (in .eps 
 ### Task 3: Perform also shell-model studies using Nushellx for all isotopes from 18F to 29F, plot the lowest-lying 3-4 states and compare with data where available. Comment your results. Try also to compute 30F and 31F
 The isotopes from 18F to 29F have been calculated and the level plots can be found in the directory ![F_isotops](https://github.com/tikrneva/Talent2017-Group6/blob/master/Part3-NushellX/F_isotops). 
 
-TODO: Try 30F and 31F
+Also 30F and 31F were calculated, the levels can be found in the following figures. 
+
+![alt text](https://github.com/tikrneva/Talent2017-Group6/blob/master/Part3-NushellX/f_30m.png)
+![alt text](https://github.com/tikrneva/Talent2017-Group6/blob/master/Part3-NushellX/f_31m.png)
+
+How to calculate 30F in nushellx? You can take 16O as a core. That means you will have 1 valence proton and 13 valence neutrons.
+The goal: you want to study this system in the way that you have 1 valence proton in sd shell and 1 valence neutron in pf shell.
+Like always, create a folder, e.g. "f30" (inside nushellx directory) and move into it on a command line. Then type ''shell'' 
+and answer the questions in the following way.
+
+ - name for batch file: f30
+ - option: lpe
+ - model space: sdpf
+ - any restrictions: y
+ - (s)ub-shell restrictions: m                  [Comment: m=you want to use major shells differently]
+ - number of proton major shells, max 2J: 2     [Comment: you have sd and pf =2 major shells]
+ - number of orbits, min, max in group 1: 3, 1, 1   [Comment: you have 3 orbits is sd shell (s1/2, d5/2 and d3/2), 1proton]
+ - number of orbits, min, max in group 2: 4,0,0   [You assume that one proton stays in sd shell so now 0 protons, in pf shell you have 4 orbits]
+ - number of proton major shells, max 2J: 2
+ - number of orbits, min, max in group 1: 3, 12, 12 [sd shell full of neutrons]
+ - number of orbits, min, max in group 2: 4,1,1 [one neutron in pf shell]
+ - interaction name: sdpfmu
+ - number of protons: 9
+ - number of nucleons: 30
+ - min J, max J, del J : 0.0,6.0,1
+ - parity: 2                                  [Comment: 1 would be enough]
+ - option (lpe, den, help or st) :st
+ 
+ and then type ". f30.bat"
+
 
 ### Task 4: See also if you can find excited states in 25O and 25F with negative parity
 
