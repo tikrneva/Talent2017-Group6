@@ -11,6 +11,10 @@ import matplotlib.pyplot as plt
 from numpy import linalg as LA
 import itertools
 from add_funcs import pickpairs,showlevels,find_slaters,diag_element,pickslatersM,two_body
+from read_lpt import read_lpt, read_lpt_exp
+import time
+
+start_time = time.clock()
 
 # Load single-particle data from file 'sdshellint.dat' ordered as (index, n, l, 2j, 2m_j)
 sp_data = np.loadtxt('spdata_sd.dat',skiprows=2,usecols=[0,1,2,3,4,5])
@@ -67,7 +71,7 @@ N_me = len(matrix_elements)
 
 # Ask for number of particles N_particles in the system
 # (must be less than or equal to number of single-particle states)
-N_particles = int(raw_input("Enter number of particles: "))
+N_particles = int(raw_input("Enter number of valence neutrons in sd-shell: "))
 while ((N_particles > N_sp)):
 	print("Wrong input: Number of particles must be less than number of single-particle states", N_sp,". Try again:")
 	N_particles = int(raw_input("Enter number of particles: "))
@@ -92,7 +96,7 @@ N_slater = len(sd_m)
 #print(matrix_elements)
 
 # Include scaling factor
-scaling_factor = (18/(16+N_particles))**0.3
+scaling_factor = (18/(16+float(N_particles)))**0.3
 matrix_elements = scaling_factor * matrix_elements
 
 # Build Hamiltonian matrix
@@ -110,10 +114,10 @@ for beta in range(0, N_slater):
 				H[beta,alpha] = H[beta,alpha] + int(phase) * matrix_elements[a]
 
 # Print Hamiltonian matrix
-print('')
-print("Hamiltonian matrix:")
-for i in range(len(H)):
-	print(H[i])
+#print('')
+#print("Hamiltonian matrix:")
+#for i in range(len(H)):
+#	print(H[i])
 
 # Check that the Hamiltonian is symmetric
 print('')
@@ -126,5 +130,51 @@ print("Energy eigenvalues:")
 w,v = LA.eig(H)
 print(sorted(w))
 
+# Set ground state to zero
+lowest = w.min()
+w0 = w - lowest
+
+# Include only levels below 6 MeV
+w0 = w0[w0<6]
+
+# stop time
+stop_time = time.clock()
+
+# print time
+print('')
+print('Computing time')
+print(stop_time-start_time)
+
+# Print lowest energy
+print('')
+print("Lowest energy level is:")
+print(lowest)
+
+# Compare with NushellX levels
+w0_nu = read_lpt(N_particles)
+w0_nu = w0_nu[w0_nu<6]
+
+w0_exp = read_lpt_exp(N_particles)
+w0_exp = w0_exp[w0_exp<6]
+
+for E in w0_nu:
+	plt.plot([1.5,2.5],[E,E],'r')
+
+for E in w0_exp:
+	plt.plot([-1.5,-0.5],[E,E],'k')
+
+for E in w0:
+	plt.plot([0,1],[E,E],'b')
+
+plt.ylabel('Energy (MeV)')
+plt.xticks([-1,0.5,2.0],['Expt','TOMS','NushellX'])
+plt.ylim(-0.25,6)
+plt.title('O'+str(16+N_particles))
+plt.savefig('plots/O'+str(16+N_particles)+'.pdf',bbox_inches='tight')
+plt.show()
+
+#showlevels([w0,w0_nu])
+#print(w0_nu)
+
 # Plot the energies
-showlevels(w)
+#showlevels(w0)
