@@ -68,7 +68,14 @@ Yes, we were able to find excited states in 25O and 25F with negative parity. Th
 Tiia is solving
 
 ### Task 6: Compare the results in the last problem to the full 1s0d model space results and to experiment
-Tiia is solving
+The energies are listed in MeVs.
+
+| Nucleus | 1 slater | Full 1s0d | Experiment |
+|---------|----------|-----------|------------|
+|   22O   |          |           | 162.0      |
+|   23O   |          |           | 164.8      |
+|   24O   |          |           | 169.0      |
+|   25O   |          |           | 168.2      |
 
 
 ### Task 7: Calculate the spectroscopic factors from the ground state of 23O to all states in 22O in the full 1s0d model space. Use the sum rule to obtain the orbital occupations in 23O for 0d5/2,1s1/2 and 0d3/2. Compare these to those given in the so-called xxx.occ file
