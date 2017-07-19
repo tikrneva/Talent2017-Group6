@@ -31,6 +31,6 @@ def read_lpt(N_particles):
 
 	return E_ex
 
-print(read_lpt(2))
+#print(read_lpt(2))
 
 
