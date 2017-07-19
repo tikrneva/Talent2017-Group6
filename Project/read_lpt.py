@@ -31,12 +31,13 @@ def read_lpt(N_particles):
 
 	return E_ex
 
+
 def read_lpt_exp(N_particles):
 	data = np.loadtxt('oxygen_data/o_0'+str(16+N_particles)+'exp.lpt',skiprows=1,usecols=[0])
 
 	return data
 
-print(read_lpt_exp(2))
+#print(read_lpt_exp(2))
 #print(read_lpt(2))
 
 
