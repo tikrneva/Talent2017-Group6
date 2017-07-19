@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def read_lpt(N_particles):
-	data = np.loadtxt('o_'+str(16+N_particles)+'2.lpt',skiprows=6,usecols=[0,1,2,3,4,5,6])
+	data = np.loadtxt('oxygen_data/o_'+str(16+N_particles)+'2.lpt',skiprows=6,usecols=[0,1,2,3,4,5,6])
 
 	number = []
 	nth_J = []
@@ -31,5 +31,6 @@ def read_lpt(N_particles):
 
 	return E_ex
 
+print(read_lpt(2))
 
 
