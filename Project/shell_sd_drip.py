@@ -12,6 +12,7 @@ import matplotlib.pyplot as plt
 from numpy import linalg as LA
 import itertools
 from add_funcs import pickpairs,showlevels,find_slaters,diag_element,pickslatersM,two_body
+import time
 
 # Load single-particle data from file 'sdshellint.dat' ordered as (index, n, l, 2j, 2m_j)
 sp_data = np.loadtxt('spdata_sd.dat',skiprows=2,usecols=[0,1,2,3,4,5])
@@ -75,8 +76,14 @@ M_val = 0
 be = []
 levels = []
 
+total_time = []
+
 # Loop over the even oxygen isotopes
 for N_particles in range(2,12,2):
+
+	print('Calculataing O'+str(16+N_particles))
+
+	start_time = time.clock()
 
 	# Create all possible Slater determinants
 	s = range(1,N_sp+1)
@@ -122,6 +129,14 @@ for N_particles in range(2,12,2):
 	# Save levels and binding energy
 	be.append(lowest)
 	levels.append(w0)
+
+	print('Time:')
+	print(start_time - time.clock())
+	total_time.append(start_time - time.clock())
+	
+print('')
+print('Total time:')
+print(np.sum(total_time))
 	
 # Plot the levels
 #showlevels(levels)
@@ -138,4 +153,5 @@ for i in range(1,len(be)):
 plt.plot(ns2n,s2n,'bo')
 plt.ylabel('Neutron separation energy')
 plt.xlabel('N')
+plt.title('Oxygen isotopes')
 plt.show()
