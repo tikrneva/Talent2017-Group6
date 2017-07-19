@@ -65,8 +65,11 @@ Yes, we were able to find excited states in 25O and 25F with negative parity. Th
  - option (lpe, den, help or st) :st
 
 ### Task 5: Use the monopole interactions to calculate the energies for the ground states of the four nuclei 22−25O assuming a single Slater determinant for each. The USDB two-body matrix elements are assumed to scale like 18/A^0.3.
+Tiia is solving
 
 ### Task 6: Compare the results in the last problem to the full 1s0d model space results and to experiment
+Tiia is solving
+
 
 ### Task 7: Calculate the spectroscopic factors from the ground state of 23O to all states in 22O in the full 1s0d model space. Use the sum rule to obtain the orbital occupations in 23O for 0d5/2,1s1/2 and 0d3/2. Compare these to those given in the so-called xxx.occ file
 
