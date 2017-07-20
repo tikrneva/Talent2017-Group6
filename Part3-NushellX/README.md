@@ -117,6 +117,6 @@ Added the files. Will write more later.
 Added the files. Will write more later.
 
 ### Task 13: Calculate the magnetic moment for the 1/2(+,1) ground state of 23O and compare to the single-particle (Schmidt) value.
-Added the .ans files and the .deo file with the ground-state magnetic moment of 23O in.
+Added the .ans files and the .deo file with the ground-state magnetic moment of 23O. The calculated value is -1.052 \mu_{N}. The single-particle Schmidt value for a single neutron in any s-orbit is -1.913 \mu_{N}.
 
 ### Task 14: Calculate the Fermi (F) and Gamow-Teller (GT) beta decay of 22O. The experimental energy of the lowest 1+ state in 22 F is 1.627 MeV. Compare the summed B(F) and B(GT) values to that expected from the sum-rules. What fraction of the GT sum-rule is in the transition to the lowest energy 1+ state?
