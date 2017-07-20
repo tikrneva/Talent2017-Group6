@@ -158,9 +158,9 @@ We have to limit the decay final state to the ground state of 24O as this is the
 The o25t1b.lsf file is the important output file.
 
 ### Task 12: Calculate the gamma decay of 22O for levels up to 6 MeV and compare to experiment. Calculate the B(E2) for Coulex to the 2(+,1) state in 22O and compare with experiment.
-Added the files. Will write more later.
+The gamma decays of 22O are shown in o_220b.deo in the Task 12 subfolder. The B(E2) is calculated to be 0.3968E+01 e^2 fm^2.
 
 ### Task 13: Calculate the magnetic moment for the 1/2(+,1) ground state of 23O and compare to the single-particle (Schmidt) value.
-Added the .ans files and the .deo file with the ground-state magnetic moment of 23O. The calculated value is -1.052 \mu_{N}. The single-particle Schmidt value for a single neutron in any s-orbit is -1.913 \mu_{N}.
+Added the .ans files and the .deo file with the ground-state magnetic moment of 23O. The calculated value is -1.052 \mu_{N}. The single-particle Schmidt value for a single neutron in an s-orbit is -1.913 \mu_{N}. Effective g-factors are often used to account for contributions of the core to the magnetic moment however this is usually not necessary in light nuclei. An experimental measurement is needed to verify this calculation.
 
 ### Task 14: Calculate the Fermi (F) and Gamow-Teller (GT) beta decay of 22O. The experimental energy of the lowest 1+ state in 22 F is 1.627 MeV. Compare the summed B(F) and B(GT) values to that expected from the sum-rules. What fraction of the GT sum-rule is in the transition to the lowest energy 1+ state?
