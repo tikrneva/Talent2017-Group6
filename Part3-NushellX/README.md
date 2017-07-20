@@ -117,7 +117,6 @@ The .ans files for O24 and O25 can be found in the Task 11 subfolder (o24.ans o2
 
 o24.ans:
 
- --------------------------------------------------
  lpe,   0             ! option (lpe or lan), neig (zero=10) 
  sd                   ! model space (.sp) name a8
  n                    ! any restrictions (y/n)
@@ -126,12 +125,11 @@ o24.ans:
  24                  ! number of nucleons
  0.0, 6.0, 1.0,      ! min J, max J, del J 
   2                  ! parity (0 for +) (1 for -) (2 for both)
---------------------------------------------------
 st                   ! option 
 
 o25.ans:
 
---------------------------------------------------
+
 lpe,   0             ! option (lpe or lan), neig (zero=10) 
 sd                   ! model space (.sp) name (a8)
 n                    ! any restrictions (y/n)
@@ -140,13 +138,12 @@ usdb                 ! interaction (.int) name (a8)
  25                  ! number of nucleons
  0.5, 6.5, 1.0,      ! min J, max J, del J 
   2                  ! parity (0 for +) (1 for -) (2 for both)
---------------------------------------------------
 st                   ! option 
 
 The .ans file for calculating the neutron decay is o25t1.ans.
 o25ti.ans:
 
---------------------------------------------------
+
 den                  ! option 
 1                    ! 1, 2 or t
 bb0802               ! initial file name (default from lpe above)
@@ -156,7 +153,6 @@ bb0903               ! final file name (default = from lpe above)
  0.0, 0.0, 1.0,      ! min, max J, del J for bb0802
  1.5, 1.5, 1.0,      ! min, max J, del J for bb0903
 n                    ! restrict coupling for operator
---------------------------------------------------
 st                   ! option 
 
 We have to limit the decay final state to the ground state of 24O as this is the only energetically allows decay according to the separation energy. 
