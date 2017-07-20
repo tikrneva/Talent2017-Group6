@@ -105,12 +105,14 @@ must include more slater determinants which contribute to energies.
 ### Task 8: Calculate the spectroscopic factors from the ground state of 23Oto all states in 24O in the full 1s0d model space. Use the sum rule to obtain the number of holes in those three orbits in 23O. Compare these to those given in the xxx.occ file.
 
 ### Task 9: Calculate the 23O 5/2(+,1) to 22O 0(+,1) spectroscopic factor. Explain why it is so small.
+
 The most important file is called o23nb.lsf which is in /Task 9/
 Also added the .ans files so people can see what needs to be input into Nushellx to calculate this.
 
 ### Task 10: Use the interaction wspot to obtain the single-particle decay width for the 23O 5/2 (+,1) state using the experimental neutron separation energy as a constraint. Combine this with the result of the last problem to obtain its neutron decay width. Compare to experiment.
 
 ### Task 11: Calculate the neutron decay width of the 25O 3/2(+,1) state and compare to experiment.  Use the experimental neutron separation energy as a constraint.
+
 The .ans files for O24 and O25 can be found in the Task 11 subfolder (o24.ans o25.ans). 
 o24.ans:
 --------------------------------------------------
@@ -158,9 +160,11 @@ We have to limit the decay final state to the ground state of 24O as this is the
 The o25t1b.lsf file is the important output file.
 
 ### Task 12: Calculate the gamma decay of 22O for levels up to 6 MeV and compare to experiment. Calculate the B(E2) for Coulex to the 2(+,1) state in 22O and compare with experiment.
+
 The gamma decays of 22O are shown in o_220b.deo in the Task 12 subfolder. The B(E2) is calculated to be 0.3968E+01 e^2 fm^2.
 
 ### Task 13: Calculate the magnetic moment for the 1/2(+,1) ground state of 23O and compare to the single-particle (Schmidt) value.
+
 Added the .ans files and the .deo file with the ground-state magnetic moment of 23O. The calculated value is -1.052 \mu_{N}. The single-particle Schmidt value for a single neutron in an s-orbit is -1.913 \mu_{N}. Effective g-factors are often used to account for contributions of the core to the magnetic moment however this is usually not necessary in light nuclei. An experimental measurement is needed to verify this calculation.
 
 ### Task 14: Calculate the Fermi (F) and Gamow-Teller (GT) beta decay of 22O. The experimental energy of the lowest 1+ state in 22 F is 1.627 MeV. Compare the summed B(F) and B(GT) values to that expected from the sum-rules. What fraction of the GT sum-rule is in the transition to the lowest energy 1+ state?
