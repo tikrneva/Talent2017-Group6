@@ -65,18 +65,40 @@ Yes, we were able to find excited states in 25O and 25F with negative parity. Th
  - option (lpe, den, help or st) :st
 
 ### Task 5: Use the monopole interactions to calculate the energies for the ground states of the four nuclei 22−25O assuming a single Slater determinant for each. The USDB two-body matrix elements are assumed to scale like 18/A^0.3.
-Tiia is solving
+We solved this exercise by using NushellX. For example, the calculation of 25O was done with the following settings:
+
+ - name for batch file: o25
+ - option: lpe
+ - model space: sd
+ - any restrictions: y
+ - (s)ub-shell restrictions: s                  [Comment: subshell restrictions wanted]
+ - p1d3/2    max. no. of particles =  4 new min, max: 0,0 [No valence protons]
+ - p1d5/2    max. no. of particles =  6 new min, max: 0,0 [No valence protons]
+ - p2s1/2    max. no. of particles =  2 new min, max: 0,0 [No valence protons]
+ - n1d3/2    max. no. of particles =  4 new min, max: 1,1 [One valence neutron on d3/2]
+ - n1d5/2    max. no. of particles =  6 new min, max: 6,6 [1d5/2 full for neutrons]
+ - n2s1/2    max. no. of particles =  2 new min, max: 2,2 [2s1/2 full for neutrons]
+ - interaction name: usdb
+ - number of protons: 8
+ - number of nucleons: 25
+ - min J, max J, del J : 0.5,5.5,1
+ - parity: 0                                
+ - option (lpe, den, help or st) :st
+ 
+ The results were found in .lpt output file (o_25b.lpt) and they are shown in the next table.
 
 ### Task 6: Compare the results in the last problem to the full 1s0d model space results and to experiment
 The energies are listed in MeVs.
 
-| Nucleus | 1 slater | Full 1s0d | Experiment |
+| Nucleus | 1 slater | Full 1s0d | Experiment BE(Nucleus)-BE(16O)|
 |---------|----------|-----------|------------|
-|   22O   |          |           | 162.0      |
-|   23O   |          |           | 164.8      |
-|   24O   |          |           | 169.0      |
-|   25O   |          |           | 168.2      |
+|   22O   |  -32.4   |   -34.5   | 34.4      |
+|   23O   |  -35.5   |   -37.1   | 37.2      |
+|   24O   |  -40.1   |   -41.2   | 41.4      |
+|   25O   |  -39.3   |   -39.9   | 40.6      |
 
+One Slater determinant describes the system surprisingly well, but in order to get closer to experimental value, one
+must include more slater determinants which contribute to energies. 
 
 ### Task 7: Calculate the spectroscopic factors from the ground state of 23O to all states in 22O in the full 1s0d model space. Use the sum rule to obtain the orbital occupations in 23O for 0d5/2,1s1/2 and 0d3/2. Compare these to those given in the so-called xxx.occ file
 
