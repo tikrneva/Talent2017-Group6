@@ -131,7 +131,7 @@ for N_particles in range(2,12,2):
 	levels.append(w0)
 
 	print('Time:')
-	print(start_time - time.clock())
+	print(time.clock()-start_time)
 	total_time.append(start_time - time.clock())
 	
 print('')
@@ -151,7 +151,7 @@ for i in range(1,len(be)):
 	ns2n.append(N_part[i]+16)
 
 plt.plot(ns2n,s2n,'bo')
-plt.ylabel('Neutron separation energy')
-plt.xlabel('N')
+plt.ylabel('Two-neutron separation energy')
+plt.xlabel('A')
 plt.title('Oxygen isotopes')
 plt.show()
