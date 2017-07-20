@@ -114,12 +114,14 @@ Also added the .ans files so people can see what needs to be input into Nushellx
 ### Task 11: Calculate the neutron decay width of the 25O 3/2(+,1) state and compare to experiment.  Use the experimental neutron separation energy as a constraint.
 
 The .ans files for O24 and O25 can be found in the Task 11 subfolder (o24.ans o25.ans). 
+
 o24.ans:
---------------------------------------------------
-lpe,   0             ! option (lpe or lan), neig (zero=10) 
-sd                   ! model space (*.sp) name (a8)
-n                    ! any restrictions (y/n)
-usdb                 ! interaction (*.int) name (a8)
+
+ --------------------------------------------------
+ lpe,   0             ! option (lpe or lan), neig (zero=10) 
+ sd                   ! model space (.sp) name a8
+ n                    ! any restrictions (y/n)
+ usdb                 ! interaction (.int) name (a8)
   8                  ! number of protons
  24                  ! number of nucleons
  0.0, 6.0, 1.0,      ! min J, max J, del J 
@@ -128,11 +130,12 @@ usdb                 ! interaction (*.int) name (a8)
 st                   ! option 
 
 o25.ans:
+
 --------------------------------------------------
 lpe,   0             ! option (lpe or lan), neig (zero=10) 
-sd                   ! model space (*.sp) name (a8)
+sd                   ! model space (.sp) name (a8)
 n                    ! any restrictions (y/n)
-usdb                 ! interaction (*.int) name (a8)
+usdb                 ! interaction (.int) name (a8)
   8                  ! number of protons
  25                  ! number of nucleons
  0.5, 6.5, 1.0,      ! min J, max J, del J 
@@ -142,6 +145,7 @@ st                   ! option
 
 The .ans file for calculating the neutron decay is o25t1.ans.
 o25ti.ans:
+
 --------------------------------------------------
 den                  ! option 
 1                    ! 1, 2 or t
@@ -165,6 +169,6 @@ The gamma decays of 22O are shown in o_220b.deo in the Task 12 subfolder. The B(
 
 ### Task 13: Calculate the magnetic moment for the 1/2(+,1) ground state of 23O and compare to the single-particle (Schmidt) value.
 
-Added the .ans files and the .deo file with the ground-state magnetic moment of 23O. The calculated value is -1.052 \mu_{N}. The single-particle Schmidt value for a single neutron in an s-orbit is -1.913 \mu_{N}. Effective g-factors are often used to account for contributions of the core to the magnetic moment however this is usually not necessary in light nuclei. An experimental measurement is needed to verify this calculation.
+Added the .ans files and the .deo file with the ground-state magnetic moment of 23O. The calculated value is -1.052 mu_N. The single-particle Schmidt value for a single neutron in an s-orbit is -1.913 mu_N. Effective g-factors are often used to account for contributions of the core to the magnetic moment however this is usually not necessary in light nuclei. An experimental measurement is needed to verify this calculation.
 
 ### Task 14: Calculate the Fermi (F) and Gamow-Teller (GT) beta decay of 22O. The experimental energy of the lowest 1+ state in 22 F is 1.627 MeV. Compare the summed B(F) and B(GT) values to that expected from the sum-rules. What fraction of the GT sum-rule is in the transition to the lowest energy 1+ state?
