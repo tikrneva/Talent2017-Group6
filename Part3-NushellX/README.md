@@ -111,7 +111,51 @@ Also added the .ans files so people can see what needs to be input into Nushellx
 ### Task 10: Use the interaction wspot to obtain the single-particle decay width for the 23O 5/2 (+,1) state using the experimental neutron separation energy as a constraint. Combine this with the result of the last problem to obtain its neutron decay width. Compare to experiment.
 
 ### Task 11: Calculate the neutron decay width of the 25O 3/2(+,1) state and compare to experiment.  Use the experimental neutron separation energy as a constraint.
-Added the files. Will write more later.
+The .ans files for O24 and O25 can be found in the Task 11 subfolder (o24.ans o25.ans). 
+o24.ans:
+--------------------------------------------------
+lpe,   0             ! option (lpe or lan), neig (zero=10) 
+sd                   ! model space (*.sp) name (a8)
+n                    ! any restrictions (y/n)
+usdb                 ! interaction (*.int) name (a8)
+  8                  ! number of protons
+ 24                  ! number of nucleons
+ 0.0, 6.0, 1.0,      ! min J, max J, del J 
+  2                  ! parity (0 for +) (1 for -) (2 for both)
+--------------------------------------------------
+st                   ! option 
+
+o25.ans:
+--------------------------------------------------
+lpe,   0             ! option (lpe or lan), neig (zero=10) 
+sd                   ! model space (*.sp) name (a8)
+n                    ! any restrictions (y/n)
+usdb                 ! interaction (*.int) name (a8)
+  8                  ! number of protons
+ 25                  ! number of nucleons
+ 0.5, 6.5, 1.0,      ! min J, max J, del J 
+  2                  ! parity (0 for +) (1 for -) (2 for both)
+--------------------------------------------------
+st                   ! option 
+
+The .ans file for calculating the neutron decay is o25t1.ans.
+o25ti.ans:
+--------------------------------------------------
+den                  ! option 
+1                    ! 1, 2 or t
+bb0802               ! initial file name (default from lpe above)
+  -1                 ! max number (-1 for all)
+bb0903               ! final file name (default = from lpe above)
+  -1                 ! max number (-1 for all)
+ 0.0, 0.0, 1.0,      ! min, max J, del J for bb0802
+ 1.5, 1.5, 1.0,      ! min, max J, del J for bb0903
+n                    ! restrict coupling for operator
+--------------------------------------------------
+st                   ! option 
+
+We have to limit the decay final state to the ground state of 24O as this is the only energetically allows decay according to the separation energy. 
+
+The o25t1b.lsf file is the important output file.
 
 ### Task 12: Calculate the gamma decay of 22O for levels up to 6 MeV and compare to experiment. Calculate the B(E2) for Coulex to the 2(+,1) state in 22O and compare with experiment.
 Added the files. Will write more later.
