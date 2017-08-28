@@ -1,1 +1,5 @@
+# The main file sd_shell.py computes the energy levels for a certain number of valence nucleons and total M-value, given as input. 
+# For the comparison to work with NushellX and experimental data, 
+# only even number of valence neutrons is accepted and only M=0 is valid, since the lowest level is shifted to zero.
 
+# The file sd_shell_drip.py plots the two-neutron separation energies for oxygen isotopes.
